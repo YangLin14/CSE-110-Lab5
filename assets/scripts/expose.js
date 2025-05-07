@@ -51,6 +51,12 @@ function init() {
   const volumeIcon = document.querySelector('#volume-controls > img');
   const playButton = document.querySelector('#expose > button');
 
+  let jsConfetti;
+  if (typeof JSConfetti !== 'undefined') {
+    jsConfetti = new JSConfetti();
+  } else {
+    console.warn("JSConfetti library not loaded. Confetti feature will not be available.");
+  }
 
   // -- Horn Select --
   hornSelect.addEventListener("change", function() {
@@ -118,15 +124,18 @@ function init() {
       }
 
       if (audioElement.src && audioElement.src !== window.location.href) {
+
         audioElement.play()
           .catch(error => console.error("Error playing audio:", error));
 
         if (hornSelect.value === 'party-horn') {
-          if (typeof JSConfetti !== 'undefined') {
-            const jsConfetti = new JSConfetti();
-            jsConfetti.addConfetti();
+          if (jsConfetti) {
+            jsConfetti.addConfetti({
+              origin: { x: 0.5, y: 0.5 },
+              confettiNumber: 700
+            });
           } else {
-            console.error("JSConfetti library not loaded.");
+            console.error("JSConfetti not available to show confetti.");
           }
         }
       }
