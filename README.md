@@ -13,6 +13,10 @@
 
 ## Links
 
-<nav>
-    <a href="expose.html" title="Go to expose page">Pt 1. Expose</a>
-</nav>
+[Expose Page](https://yanglin14.github.io/CSE-110-Lab5/expose.html)\
+[Explore Page](https://yanglin14.github.io/CSE-110-Lab5/explore.html)
+
+
+## Notes
+
+Screenshots are in `assets/screenshots`
