@@ -11,7 +11,6 @@ import {
 // TODO - Part 2
 
 // -- is phone number --
-
 // true
 test('123-456-7890 is a valid phone number', () => {
   expect(isPhoneNumber('123-456-7890')).toBe(true);
@@ -31,7 +30,6 @@ test('12-45-7890 is a valid phone number', () => {
 });
 
 // -- is email --
-
 // true
 test('user@example.com is a valid email', () => {
   expect(isEmail('user@example.com')).toBe(true);
@@ -51,7 +49,6 @@ test('nameabc.co is not a valid email', () => {
 });
 
 // -- is strong password --
-
 // true
 test('Password123 is a strong password', () => {
   expect(isStrongPassword('Password123')).toBe(true);
@@ -71,7 +68,6 @@ test('P is not a strong password', () => {
 });
 
 // -- is date --
-
 // true
 test('01/01/2021 is a valid date', () => {
   expect(isDate('01/01/2021')).toBe(true);
@@ -91,7 +87,6 @@ test('2025/05/06 is not a valid date', () => {
 });  
 
 // -- is hex color --
-
 // true
 test('#a1b2c3 is a valid hex color', () => {
   expect(isHexColor('#a1b2c3')).toBe(true);
